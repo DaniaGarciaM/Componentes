@@ -5,8 +5,17 @@ class InputsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text('Inputs Screen'),
+    return Scaffold(
+      body: const Center(
+        child: Text('Inputs screen'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.pink,
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: const Icon(Icons.keyboard_return_outlined),
+      ),
     );
   }
 }

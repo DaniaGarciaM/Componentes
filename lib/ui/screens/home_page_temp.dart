@@ -55,11 +55,11 @@ List<Widget> _listaItems(List<dynamic> data, BuildContext context) {
       ),
       subtitle: Text(opt['texto2']),
       onTap: () {
-        final route = MaterialPageRoute(builder: (context) {
-          return const AlertsScreen();
-        });
-
-        Navigator.push(context, route);
+        // final route = MaterialPageRoute(builder: (context) {
+        //   return const AlertsScreen();
+        // });
+        Navigator.pushNamed(context, opt['ruta']);
+        //Navigator.push(context, route);
       },
     );
     opciones

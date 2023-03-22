@@ -1,5 +1,6 @@
 import 'package:componentes/providers/menu_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:componentes/utils/icons_mapping.dart';
 
 class HomePageTemp extends StatelessWidget {
   const HomePageTemp({super.key});
@@ -9,6 +10,7 @@ class HomePageTemp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Componentes de Flutter'),
+        backgroundColor: Colors.pink,
       ),
       body: _lista(),
     );
@@ -26,7 +28,7 @@ Widget _lista() {
     children: _listaItems(),
   );*/
   return FutureBuilder(
-    future:  menuProvider.loadData(), //indicando lo que queremos esperar
+    future: menuProvider.loadData(), //indicando lo que queremos esperar
     builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
       //print('builder: ');
       //print(snapshot.data);
@@ -34,18 +36,20 @@ Widget _lista() {
         children: _listaItems(snapshot.data as List<dynamic>),
       );
     },
-    );
+  );
 }
 
 List<Widget> _listaItems(List<dynamic> data) {
   final List<Widget> opciones = [];
+  IconMapping iconMap = const IconMapping();
+
   data.forEach((opt) {
     final tile = ListTile(
       title: Text(opt['texto']),
-      leading: const Icon(Icons.account_box, color: Colors.blueAccent,),
+      leading: iconMap.getIcon(opt['icon']),
       trailing: const Icon(
         Icons.keyboard_arrow_right,
-        color:  Colors.blue,
+        color: Colors.pink,
       ),
       onTap: () {},
     );

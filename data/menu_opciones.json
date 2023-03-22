@@ -25,7 +25,7 @@
          {
             "ruta" : "list",
             "icon" : "list",
-            "text" : "listas y scrolls"
+            "texto" : "listas y scrolls"
           },
           {
             "ruta" : "camera",

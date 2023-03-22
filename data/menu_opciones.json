@@ -5,32 +5,38 @@
         {
             "ruta" : "alert",
             "icon" : "add_alert",
-            "texto" : "Alertas"
+            "texto" : "Alertas",
+            "texto2" : "Se mostraran Alertas"
         },
         {
             "ruta" : "inputs",
             "icon" : "input",
-            "texto" : "Entradas de texto"
+            "texto" : "Entradas de texto",
+            "texto2": "Mostrará los datos"
         },
         {
             "ruta" : "card",
             "icon" : "folder_open",
-            "texto" : "Cards - Tarjetas"
+            "texto" : "Cards - Tarjetas",
+            "texto2": "muestra cards"
         },
         {
             "ruta" : "firebase",
             "icon" : "data",
-            "texto" : "Firebase Storage"
+            "texto" : "Firebase Storage",
+            "texto2": "Mostrar Firebase"
          },
          {
             "ruta" : "list",
             "icon" : "list",
-            "texto" : "listas y scrolls"
+            "texto" : "listas y scrolls",
+            "texto2": "Muestra Listas y Scrolls"
           },
           {
             "ruta" : "camera",
             "icon" : "camera",
-            "texto" : "foto"
+            "texto" : "foto",
+            "texto2": "Toma Fotos"
           }
     ]
 }

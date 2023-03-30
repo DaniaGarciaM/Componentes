@@ -1,5 +1,6 @@
 import 'package:componentes/providers/menu_provider.dart';
 import 'package:componentes/ui/screens/alerts_screen.dart';
+import 'package:componentes/utils/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:componentes/utils/icons_mapping.dart';
 
@@ -11,7 +12,7 @@ class HomePageTemp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Componentes de Flutter'),
-        backgroundColor: Colors.pink,
+        //backgroundColor: Colors.pink,
       ),
       body: _lista(),
     );
@@ -51,7 +52,7 @@ List<Widget> _listaItems(List<dynamic> data, BuildContext context) {
       leading: iconMap.getIcon(opt['icon']),
       trailing: const Icon(
         Icons.keyboard_arrow_right,
-        color: Colors.pink,
+        color: AppTheme.primary,
       ),
       subtitle: Text(opt['texto2']),
       onTap: () {
